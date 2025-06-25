@@ -988,6 +988,18 @@ button:hover {
 }
 
 /* Responsive for mobile */
+.blog-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 16px auto;
+  padding: 18px 18px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  font-size: 1.1rem;
+  word-break: break-word;
+}
 @media (max-width: 700px) {
   .browse-ac-hero {
     padding: 0 8px;
@@ -1025,6 +1037,18 @@ button:hover {
   transition: box-shadow 0.2s, border 0.2s;
   position: relative;
 }
+.blog-card {
+    padding: 12px 8px;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  .blog-title {
+    font-size: 1.05rem;
+  }
+  .blog-desc {
+    font-size: 0.98rem;
+  }
 
 .blog-card:hover {
   box-shadow: 0 8px 32px rgba(0,122,255,0.10);
