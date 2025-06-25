@@ -42,17 +42,17 @@ body {
   position: relative;
 }
 .hero-image {
-  width: 500px;      /* Change this value as needed */
+  width: 1000px;      /* Change this value as needed */
   max-width: 90vw;   /* Makes it responsive on small screens */
   height: auto;
   border-radius: 32px;
   display: block;
-  margin: 0 auto;
+ margin-bottom: 40px;
 }
 
 .hero-content {
   text-align: left;
-  color: #ff69b4;
+  color: #00008B;
   padding: 48px 40px;
   border-radius: 24px;
   max-width: 700px;
@@ -62,9 +62,9 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
   line-height: 1.1;
   text-align: left;
 }
