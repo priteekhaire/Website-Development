@@ -1076,8 +1076,8 @@ button:hover {
 
 .blog-card .blog-badge {
   position: absolute;
-  top: 18px;
-  left: 18px;
+  top: 15px;
+  left: 15px;
   background: #d4f8e8;
   color: #1a7f37;
   font-size: 1rem;
