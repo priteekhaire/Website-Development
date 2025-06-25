@@ -41,6 +41,14 @@ body {
   margin: 32px auto 24px auto;
   position: relative;
 }
+.hero-image {
+  width: 500px;      /* Change this value as needed */
+  max-width: 90vw;   /* Makes it responsive on small screens */
+  height: auto;
+  border-radius: 32px;
+  display: block;
+  margin: 0 auto;
+}
 
 .hero-content {
   text-align: left;
