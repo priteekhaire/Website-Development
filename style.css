@@ -1075,7 +1075,6 @@ button:hover {
 }
 
 .blog-card .blog-badge {
-  position: absolute;
   top: 15px;
   left: 15px;
   background: #d4f8e8;
