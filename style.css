@@ -42,13 +42,13 @@ body {
   position: relative;
 }
 .hero-image {
-  width: 1000px;  
-  height:  400px
+  width: 1500px;  
+  height:  300px
   max-width: 90vw;  
   height: auto;
   border-radius: 32px;
   display: block;
- margin-bottom: 30px;
+ margin-bottom: 20px;
 }
 
 .hero-content {
