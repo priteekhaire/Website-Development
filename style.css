@@ -83,7 +83,7 @@ body {
 }
 
 .calculator-left {
-  flex: 1.1;
+  display: flex;
   min-width: 320px;
   max-width: 480px;
   align-self: stretch;
@@ -109,7 +109,7 @@ body {
 }
 
 .calculator-right {
-  flex: 1;
+  display: flex;
   min-width: 340px;
   max-width: 540px;
   display: flex;
