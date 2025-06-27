@@ -753,7 +753,7 @@ calculator h3 {
   background-repeat: no-repeat;   /* Do not repeat */
   border-radius: 20px;
   min-height: 400px;              /* Adjust as needed */
-  width: 100%;
+  width: 1000px;
   display: flex;
   align-items: center;
   justify-content: center;        /* Center any text inside */
