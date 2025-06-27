@@ -748,16 +748,11 @@ calculator h3 {
 .hero-content {
  .hero-content {
  
-  background-size: cover;         /* Fill the container, crop if needed */
-  background-position: center;    /* Center the image */
-  background-repeat: no-repeat;   /* Do not repeat */
+  background-size: cover;
+  background-position: center;
   border-radius: 20px;
-  min-height: 400px;              /* Adjust as needed */
-  width: 1000px;
-  display: flex;
-  align-items: center;
-  justify-content: center;        /* Center any text inside */
-  box-sizing: border-box;
+  min-height: 400px; /* adjust as needed */
+  width: 100%;
 }
 }
 .hero-content h1 {
