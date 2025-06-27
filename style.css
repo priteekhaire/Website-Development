@@ -747,12 +747,12 @@ calculator h3 {
 }
 .hero-content {
   background-image: url('images/Air.webp');
-  background-repeat: no-repeat;
+/*   background-repeat: no-repeat; */
   background-size: contain;      /* Keeps image in one line, scales to fit height */
   background-position: center; /* Aligns image to the left, vertically centered */
   border-radius: 20px;
-  min-height: 200px;             /* Adjust height as needed */
-  width: 100%;
+  min-height: 500px;             /* Adjust height as needed */
+  width: 800px;
   display: flex;
   align-items: center;
 }
