@@ -746,16 +746,17 @@ calculator h3 {
   background: #f4f8f4;
 }
 .hero-content {
+ .hero-content {
   background-image: url('images/Air.webp');
-  background-repeat: no-repeat;
-  background-size: contain;         /* Keeps image in one line, scales to fit height */
-  background-position: left center; /* Aligns image to the left, vertically centered */
-  min-height: 200px;                /* Adjust height for your image */
-  width: 100%;
+  background-size: cover;         /* Fill the container, crop if needed */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* Do not repeat */
   border-radius: 20px;
+  min-height: 400px;              /* Adjust as needed */
+  width: 100%;
   display: flex;
   align-items: center;
-  padding-left: 320px;              /* Space for text to the right of the image */
+  justify-content: center;        /* Center any text inside */
   box-sizing: border-box;
 }
 }
