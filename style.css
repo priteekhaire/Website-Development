@@ -754,7 +754,7 @@ calculator h3 {
   background-repeat: no-repeat;   /* Do not repeat */
   border-radius: 20px;
   min-height: 300px;              /* You can adjust this */
-  width: 90%;                     /* ✅ Responsive width */
+  width: 100%;                     /* ✅ Responsive width */
   max-width: 1000px;              /* ✅ Keep max size on large screens */
   margin: 0 auto;                 /* ✅ Center horizontally */
   display: flex;
