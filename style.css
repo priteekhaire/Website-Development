@@ -746,15 +746,7 @@ calculator h3 {
   background: #f4f8f4;
 }
 .hero-content {
-  background-image: url('images/Air.webp');
-/*   background-repeat: no-repeat; */
-  background-size: contain;      /* Keeps image in one line, scales to fit height */
-  background-position: center; /* Aligns image to the left, vertically centered */
-  border-radius: 20px;
-  min-height: 500px;             /* Adjust height as needed */
-  width: 800px;
-  display: flex;
-  align-items: center;
+  background-image: url('images/Air.webp')no-repeat left center / contain;
 }
 .hero-content h1 {
   font-size: 2.5rem;
