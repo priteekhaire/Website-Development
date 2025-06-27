@@ -747,7 +747,7 @@ calculator h3 {
 }
 .hero-content {
  .hero-content {
-  background-image: url('images/pritee.jpg');
+ 
   background-size: cover;         /* Fill the container, crop if needed */
   background-position: center;    /* Center the image */
   background-repeat: no-repeat;   /* Do not repeat */
