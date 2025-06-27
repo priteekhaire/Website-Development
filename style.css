@@ -745,16 +745,16 @@ calculator h3 {
   border-left: 6px solid #1a7f37;
   background: #f4f8f4;
 }
-.hero-content {
+
  .hero-content {
- background-image: url('C:/Users/prite/Downloads/Air.webp');
+ background-image: url('images/Air.webp');
   background-size: cover;
   background-position: center;
   border-radius: 20px;
   min-height: 400px; /* adjust as needed */
   width: 100%;
 }
-}
+
 .hero-content h1 {
   font-size: 2.5rem;
   font-weight: bold;
