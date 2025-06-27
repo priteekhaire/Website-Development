@@ -747,13 +747,23 @@ calculator h3 {
 }
 
  .hero-content {
- background-image: url('images/Air.webp');
-  background-size: cover;
-  background-position: center;
+ 
+  background-image: url('images/Air.webp'); /* Use actual path */
+  background-size: cover;         /* Fill the container, crop if needed */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* Do not repeat */
   border-radius: 20px;
-  min-height: 400px; /* adjust as needed */
-  width: 100%;
+  min-height: 300px;              /* You can adjust this */
+  width: 90%;                     /* ✅ Responsive width */
+  max-width: 1000px;              /* ✅ Keep max size on large screens */
+  margin: 0 auto;                 /* ✅ Center horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
+
+
 
 .hero-content h1 {
   font-size: 2.5rem;
