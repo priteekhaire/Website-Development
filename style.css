@@ -792,15 +792,29 @@ h2 {
   font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
+  input[type="range"] {
+    width: 100%;
+    padding: 10px 1px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    background: #f4f6fa;
+    color: #222;
+}
  
 .calculator {
     flex: 1 1 0%;
-  width: 100%;
+ 
   display: flex;
+  min-width: 320px;
+  max-width: 300PX;
   border-color: hsl(var(--border));
   box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  height: 300PX;
+  min-height: 200PX;
+ border-width: 0;
+  border-style: solid;
 
 ;
     flex-direction: column;
