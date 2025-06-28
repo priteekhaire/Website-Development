@@ -367,6 +367,21 @@ body {
   margin-bottom: 5px;
   margin-top: 200px;
 }
+   background-image: url('images/sort.jpg');
+  background-size: cover;
+object-fit: cover;
+  border-radius: calc(var(--radius)
+   width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+    vertical-align: middle;
+  border-color: hsl(var(--border));
+ 
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
 }
 html {
   scroll-behavior: smooth;
@@ -770,7 +785,7 @@ calculator h3 {
 
  .hero-content {
  
-  background-image: url('images/wm.jpg'); /* Use actual path */
+  background-image: url('images/sort.jpg'); /* Use actual path */
   background-size: cover;         /* Fill the container, crop if needed */
   background-position: center;    /* Center the image */
   background-repeat: no-repeat;   /* Do not repeat */
