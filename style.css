@@ -350,6 +350,23 @@ body {
   .footer-title span {
     font-size-adjust: 1rem !important;
   }
+   .calculate-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 150px;
+  margin-right: 50px;
+}
+.energy-tip-box {
+  background: #e3f7e8;
+  color: #1a7f37;
+  border-radius: 12px;
+  padding: 18px 24px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 200px;
+}
 }
 html {
   scroll-behavior: smooth;
@@ -784,4 +801,37 @@ calculator h3 {
 }
 h2 {
   font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+ 
+.calculator {
+    background: #0a2342;
+    color: #fff;
+    border-radius: 28px;
+    padding: .75rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+    min-width: 320px;
+    max-width: 480px;
+    /* width: 600px; */
+    height: 400px;
+    min-height: 400px;
+    margin-top: 113px;
+    display: flex
+;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 60px;
+    --tw-bg-opacity: 1;
+    gap: .75rem;
+    flex-direction: column;
+    flex: 1 1 0%;
+    width: unset;
+    display: flex
+;
+    border-color: hsl(var(--border));
+}
+
+
+  
+
 }
