@@ -813,7 +813,7 @@ calculator h3 {
 h2 {
   font-weight: bold;
 }
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
  
 .calculator {
     background: #0a2342;
@@ -860,4 +860,4 @@ h2 {
 }
   
 
-}
+} */
