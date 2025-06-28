@@ -765,7 +765,7 @@ calculator h3 {
 }
 
  .hero-content {
-  background-image: url('D:/Website-Development/images/Air.webp');
+  background-image: url('images/sort.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -818,6 +818,15 @@ h2 {
     display: flex
 ;
     border-color: hsl(var(--border));
+}
+  .hero-content {
+  background-image: url('images/sort.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  min-height: 400px; /* adjust as needed */
+  width: 100%;
+  /* Optional: add padding or height as needed */
 }
 
 
