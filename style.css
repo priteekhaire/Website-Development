@@ -363,6 +363,7 @@ body {
   margin-bottom: 5px;
   margin-top: 200px;
 }
+  .hero-content {
    background-image: url('images/sort.jpg');
   background-size: cover;
   object-fit: cover;
@@ -813,7 +814,7 @@ calculator h3 {
 h2 {
   font-weight: bold;
 }
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
  
 .calculator {
     background: #0a2342;
@@ -860,4 +861,4 @@ h2 {
 }
   
 
-} */
+}
