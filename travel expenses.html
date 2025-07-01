@@ -81,7 +81,7 @@
     function calculateBudget() {
       const from = document.getElementById('from').value.trim().toLowerCase();
       const to = document.getElementById('to').value.trim().toLowerCase();
-      const key = ${from}-${to};
+      const key = `${from}-${to}`;
 
       if (!distances[key]) {
         document.getElementById('result').innerHTML =
@@ -104,3 +104,4 @@
   </script>
 </body>
 </html>
+
