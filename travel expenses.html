@@ -67,7 +67,7 @@
     <div class="result" id="result" style="display:none"></div>
   </div>
 
- <script>
+  <script>
     const distances = {
       'mumbai-kolkata': 2000,
       'mumbai-pune': 150,
@@ -79,20 +79,16 @@
     const fuelPrice = 100;     // ₹ per litre
 
     function calculateBudget() {
-    const fromInput = document.getElementById('from').value.trim().toLowerCase();
-    const toInput = document.getElementById('to').value.trim().toLowerCase();
-    const key = `${fromInput}-${toInput}`;
+      const from = document.getElementById('from').value.trim().toLowerCase();
+      const to = document.getElementById('to').value.trim().toLowerCase();
+      const key = ${from}-${to};
 
-    if (!distances[key]) {
+      if (!distances[key]) {
         document.getElementById('result').innerHTML =
-            'Sorry, distance information for the entered route is not available.';
+          'Sorry, distance information for the entered route is not available.';
         document.getElementById('result').style.display = 'block';
         return;
-    }
-
-    // use distances[key] below as needed
-}
-
+      }
 
       const distance = distances[key];
       const fuelNeeded = distance / fuelEfficiency;
@@ -104,8 +100,7 @@
         <strong>Fuel Cost:</strong> ₹${fuelCost.toFixed(2)}
       `;
       document.getElementById('result').style.display = 'block';
-    
+    }
   </script>
-
 </body>
 </html>
