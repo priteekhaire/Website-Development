@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Expense Estimator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .calculator {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+    .calculator h2 {
+      margin-bottom: 20px;
+    }
+    .calculator label {
+      display: block;
+      margin-top: 10px;
+    }
+    .calculator input, .calculator select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .calculator button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .result {
+      margin-top: 20px;
+      background: #e9f7ef;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Travel Expense Estimator</h2>
+
+    <label for="from">Departure City:</label>
+    <input type="text" id="from" placeholder="e.g., Mumbai" />
+
+    <label for="to">Destination City:</label>
+    <input type="text" id="to" placeholder="e.g., Kolkata" />
+
+    <button onclick="calculateBudget()">Calculate Budget</button>
+
+    <div class="result" id="result" style="display:none"></div>
+  </div>
+
+ <script>
+    const distances = {
+      'mumbai-kolkata': 2000,
+      'mumbai-pune': 150,
+      'mumbai-delhi': 1450,
+      'pune-nagpur': 750
+    };
+
+    const fuelEfficiency = 12; // km/litre
+    const fuelPrice = 100;     // ₹ per litre
+
+    function calculateBudget() {
+    const fromInput = document.getElementById('from').value.trim().toLowerCase();
+    const toInput = document.getElementById('to').value.trim().toLowerCase();
+    const key = `${fromInput}-${toInput}`;
+
+    if (!distances[key]) {
+        document.getElementById('result').innerHTML =
+            'Sorry, distance information for the entered route is not available.';
+        document.getElementById('result').style.display = 'block';
+        return;
+    }
+
+    // use distances[key] below as needed
+}
+
+
+      const distance = distances[key];
+      const fuelNeeded = distance / fuelEfficiency;
+      const fuelCost = fuelNeeded * fuelPrice;
+
+      document.getElementById('result').innerHTML = `
+        <strong>Estimated Travel Budget:</strong> ₹${fuelCost.toFixed(2)}<br/>
+        <strong>Distance:</strong> ${distance} km<br/>
+        <strong>Fuel Cost:</strong> ₹${fuelCost.toFixed(2)}
+      `;
+      document.getElementById('result').style.display = 'block';
+    
+  </script>
+
+</body>
+</html>
