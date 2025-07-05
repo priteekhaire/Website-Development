@@ -1,4 +1,3 @@
-<!-- Entire code starts here -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,41 +5,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Travel Cost Calculator</title>
   <style>
-    /* [Your existing styles are retained here – omitted for brevity] */
-    body { margin: 0; font-family: Arial, sans-serif; background-color: #f0f4f8; }
-    .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; background-color: #fff; border-bottom: 1px solid #1b1212; }
-    .logo { display: flex; align-items: center; }
-    .logo img { height: 40px; }
-    .logo span { margin-left: 8px; font-weight: bold; font-size: 1.5rem; }
-    .logo span span { color: #007aff; }
-    .nav ul { list-style: none; display: flex; gap: 20px; }
-    .nav a { text-decoration: none; color: #000; font-weight: bold; }
-    .nav a.active, .nav a:hover { border-bottom: 2px solid #007aff;color: #007aff; }
-    .contact-btn { background-color: #007aff; color: #fff; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; }
-    .main-content { display: flex; justify-content: center; align-items: center; padding: 40px 20px; }
-    .container { background-color: white; padding: 30px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); width: 100%; max-width: 400px; }
-    h2 { text-align: center; color: #007aff; margin-bottom: 20px; }
-    label { display: block; margin-top: 10px; font-weight: bold; }
-    select, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; }
-    button { background-color: #28a745; color: white; font-weight: bold; cursor: pointer; margin-top: 15px; }
-    .result { margin-top: 20px; padding: 15px; background-color: #f1f1f1; border-radius: 10px; display: none; }
-    .footer { text-align: center; padding: 48px 16px 32px 16px; background: #fff; color: #111; margin-top: 32px; border-top: 1px solid #eee; }
-    .footer-logo { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 12px; }
-    .footer-title { font-family: inherit; font-weight: bold; color: #111; letter-spacing: 2px; }
-    .footer-follow { font-size: 1.1rem; margin: 12px 0 8px 0; font-weight: 500; }
-    .footer-social { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; }
-    .footer-social a img { filter: grayscale(1) brightness(0.5); transition: filter 0.2s; }
-    .footer-social a:hover img { filter: none; }
-    .footer-contact { font-size: 1.1rem; margin-bottom: 10px; }
-    .footer-copyright { font-size: 1.1rem; margin-top: 8px; color: #222; }
-    .row { display: flex; justify-content: space-between; gap: 10px; }
-    .column { flex: 1; }
-
-    @media (max-width: 600px) {
-      .nav ul { flex-direction: column; gap: 10px; }
-      .header { flex-direction: column; align-items: flex-start; }
-      .contact-btn { margin-top: 10px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
+
+    body {
+      background: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: #f1f1f1;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .logo span {
+      font-size: 1.5rem;
+      font-weight: bold;
+       color: #00aced;
+    }
+
+    .logo span span {
+      color: #00aced;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: rgb(22, 21, 21);
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover, .nav .active {
+      color: #00aced;
+    }
+
+    .contact-btn {
+      background: #00aced;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      background: #007bb5;
+    }
+
+    .main-content {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      margin-top: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .main-content h2 {
+      margin-bottom: 1rem;
+      color: #003366;
+    }
+
+    .row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    select, input {
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #003366;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00509e;
+    }
+
+    .result {
+      background: #e0f7fa;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+
+   /* Footer */
+.footer {
+  text-align: center;
+  padding: 48px 16px 32px 16px;
+  background: #fff;
+  color: #111;
+  margin-top: 32px;
+  border-top: 1px solid #eee;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.footer-title {
+  font-family: inherit;
+  font-weight: bold;
+  color: #111;
+  letter-spacing: 2px;
+}
+.footer-follow {
+  font-size: 1.1rem;
+  margin: 12px 0 8px 0;
+  font-weight: 500;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.footer-social a img {
+  filter: grayscale(1) brightness(0.5);
+  transition: filter 0.2s;
+}
+.footer-social a:hover img {
+  filter: none;
+}
+.footer-contact {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.footer-copyright {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #222;
+}
   </style>
 </head>
 <body>
@@ -52,8 +199,8 @@
   </div>
   <nav class="nav">
     <ul>
-      <li><a href="index.html" >Home</a></li>
-      <li><a href="travel expenses.html"class="active">Travel Expenses</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="travel expenses.html" class="active">Travel Expenses</a></li>
       <li><a href="browse-ac.html">Browse AC</a></li>
       <li><a href="blogs.html">Blogs</a></li>
     </ul>
@@ -64,17 +211,6 @@
 <div class="main-content">
   <div class="container">
     <h2>🌍 Travel Cost Calculator</h2>
-
-    <label for="service">Select Service:</label>
-    <select id="service">
-      <option value="driving">🛣️ Driving Cost</option>
-      <option value="flight">✈️ Flight Tickets</option>
-      <option value="distance">📏 Distance</option>
-      <option value="flightTime">⏱️ Flight Time</option>
-      <option value="currency">💱 Currency Converter</option>
-      <option value="latlong">🧭 Latitude / Longitude</option>
-      <option value="Hotel">🏨 Nearby Hotels</option>
-    </select>
 
     <div class="row">
       <div class="column">
@@ -110,6 +246,9 @@
       </div>
     </div>
 
+    <label for="days">Number of Days of Stay</label>
+    <input type="number" id="days" min="1" value="1" placeholder="Enter number of days" />
+
     <button onclick="calculate()">Calculate</button>
 
     <div id="result" class="result"></div>
@@ -117,23 +256,26 @@
 </div>
 
 <footer class="footer" id="footer">
-  <div class="footer-logo">
-    <img src="images/ac.jpg" alt="ACBill Calculator Logo" />
-    <div class="footer-title">
-      <span style="font-weight:bold;font-size:2rem;letter-spacing:2px;">ACBILL</span>
-      <div style="font-size:1.2rem;letter-spacing:4px;">CALCULATOR</div>
+    <div class="footer-logo">
+      <img src="C:/Users/prite/Downloads/ac.jpg" alt="ACBill Calculator Logo" style="height:60px;">
+      <div class="footer-title">
+        <span style="font-weight:bold;font-size:2rem;letter-spacing:2px;">ACBILL</span>
+        <div style="font-size:1.2rem;letter-spacing:4px;">CALCULATOR</div>
+      </div>
     </div>
-  </div>
-  <div class="footer-follow">Follow Us</div>
-  <div class="footer-social">
-    <a href="https://facebook.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
-    <a href="https://instagram.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
-    <a href="https://linkedin.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /></a>
-  </div>
-  <div class="footer-contact">Contact Us: +91 8245567888 &nbsp; techligator@gmail.com</div>
-  <div class="footer-copyright">© ACBill Calculator</div>
-</footer>
-
+    <div class="footer-follow">Follow Us</div>
+    <div class="footer-social">
+      <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:32px;width:32px;"></a>
+      <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:32px;width:32px;"></a>
+      <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:32px;width:32px;"></a>
+    </div>
+    <div class="footer-contact">
+      Contact Us: +91 8245567888 &nbsp; techligator@gmail.com
+    </div>
+    <div class="footer-copyright">
+      Copyright @ AcBill Calculator
+    </div>
+  </footer>
 <script>
   const countryCityMap = {
     india: {
@@ -168,91 +310,66 @@
 
   function haversineDistance(lat1, lon1, lat2, lon2) {
     const R = 6371;
-    const dLat = (lat2 - lat1) * Math.PI / 180;
-    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const toRad = angle => angle * Math.PI / 180;
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
     const a = Math.sin(dLat / 2) ** 2 +
-              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
               Math.sin(dLon / 2) ** 2;
     return 2 * R * Math.asin(Math.sqrt(a));
   }
 
-  async function getExchangeRate() {
-    try {
-      const res = await fetch(`https://open.er-api.com/v6/latest/INR`);
-      const data = await res.json();
-      return data.rates && data.rates.USD;
-    } catch {
-      return null;
-    }
+  function capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
   }
 
-  async function calculate() {
-    const service = document.getElementById('service').value;
+  function calculate() {
     const fromCountry = document.getElementById('fromCountry').value;
     const toCountry = document.getElementById('toCountry').value;
     const from = document.getElementById('from').value;
     const to = document.getElementById('to').value;
+    const days = parseInt(document.getElementById('days').value);
     const resultDiv = document.getElementById('result');
 
-    if (!from || !to || !fromCountry || !toCountry) {
-      resultDiv.innerText = "Please select both countries and cities.";
+    if (!from || !to || !fromCountry || !toCountry || !days || days <= 0) {
+      resultDiv.innerText = "Please select departure/destination and enter a valid number of days.";
       resultDiv.style.display = "block";
       return;
     }
 
     const fromCoords = countryCityMap[fromCountry][from];
     const toCoords = countryCityMap[toCountry][to];
-    const dist = haversineDistance(fromCoords.lat, fromCoords.lon, toCoords.lat, toCoords.lon);
-    const time = (dist / 800).toFixed(2);
-    const fuel = (dist * 100 / 12).toFixed(0);
-    const flight = (dist * 2.5).toFixed(0);
+    const distance = haversineDistance(fromCoords.lat, fromCoords.lon, toCoords.lat, toCoords.lon);
 
+    const stayCostPerDay = 2000;
+    const totalStayCost = days * stayCostPerDay;
+
+    const isInternational = fromCountry !== toCountry;
+    const flightRate = isInternational ? 15 : 8;
+    const flightCost = distance * flightRate;
+
+    const baseCost = totalStayCost + flightCost;
+    const miscCost = baseCost * 0.05;
+    const totalCost = baseCost + miscCost;
+
+    resultDiv.innerHTML = `
+      <b>✈️ Travel Expense Breakdown</b><br><br>
+      <b>From:</b> ${capitalize(from)} (${capitalize(fromCountry)})<br>
+      <b>To:</b> ${capitalize(to)} (${capitalize(toCountry)})<br>
+      <b>Distance:</b> ${distance.toFixed(2)} km<br>
+      <b>Flight Cost:</b> ₹${flightCost.toFixed(0)}<br>
+      <b>Stay Duration:</b> ${days} day(s)<br>
+      <b>Stay Cost (@ ₹${stayCostPerDay}/day):</b> ₹${totalStayCost}<br>
+      <b>Miscellaneous (5%):</b> ₹${miscCost.toFixed(0)}<br><br>
+      <b>Total Estimated Cost:</b> ₹${totalCost.toFixed(0)}
+    `;
     resultDiv.style.display = "block";
-
-    switch (service) {
-      case "driving":
-        resultDiv.innerHTML = `🛣️ Driving Cost<br>From <b>${from}</b> to <b>${to}</b><br>Distance: ${dist.toFixed(2)} km<br>Fuel Cost: ₹${fuel}`;
-        break;
-      case "flight":
-        resultDiv.innerHTML = `✈️ Flight Ticket<br>From <b>${from}</b> to <b>${to}</b><br>Estimated Cost: ₹${flight}`;
-        break;
-      case "distance":
-        resultDiv.innerHTML = `📏 Distance<br>${dist.toFixed(2)} km between <b>${from}</b> and <b>${to}</b>`;
-        break;
-      case "flightTime":
-        resultDiv.innerHTML = `⏱️ Flight Time<br>~${time} hours between <b>${from}</b> and <b>${to}</b>`;
-        break;
-      case "currency":
-        const rate = await getExchangeRate();
-        resultDiv.innerHTML = rate ? `💱 Currency Converter<br>1 INR = ${rate.toFixed(4)} USD` : "Failed to fetch exchange rate.";
-        break;
-      case "latlong":
-        resultDiv.innerHTML = `🧭 Latitude/Longitude<br><b>${from}</b>: ${fromCoords.lat}, ${fromCoords.lon}<br><b>${to}</b>: ${toCoords.lat}, ${toCoords.lon}`;
-        break;
-      case "Hotel":
-        const overpassURL = `https://overpass-api.de/api/interpreter?data=[out:json];node["tourism"="hotel"](around:2000,${toCoords.lat},${toCoords.lon});out;`;
-        resultDiv.innerHTML = "🏨 Searching for hotels near <b>" + to + "</b>...";
-        try {
-          const res = await fetch(overpassURL);
-          const data = await res.json();
-          if (data.elements.length === 0) {
-            resultDiv.innerHTML = `❌ No hotels found near <b>${to}</b>.`;
-          } else {
-            let hotelList = data.elements.map(h => `🏨 ${h.tags.name || "Unnamed Hotel"} (${h.lat.toFixed(4)}, ${h.lon.toFixed(4)})`).join("<br>");
-            resultDiv.innerHTML = `✅ Hotels near <b>${to}</b>:<br><br>${hotelList}`;
-          }
-        } catch (err) {
-          resultDiv.innerHTML = "⚠️ Failed to load hotel data.";
-        }
-        break;
-      default:
-        resultDiv.innerText = "Invalid selection.";
-    }
   }
 </script>
 
 </body>
 </html>
+
 
 
 
