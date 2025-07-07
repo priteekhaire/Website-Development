@@ -629,19 +629,18 @@ input[type="range"] {
   margin-top: 60px;
   margin-right: 50px;
 }
-.calculate-btn {
+.contact-btn {
   background: #007aff;
   color: #fff;
-  border: none;
-  border-radius: 16px;
-  padding: 18px 48px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 12px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
   transition: background 0.2s;
-  margin-top: -90px;
-  margin-right: -300px;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 .calculate-btn:hover {
