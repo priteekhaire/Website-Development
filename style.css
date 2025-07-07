@@ -9,13 +9,17 @@ body {
 
 /* Header */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  padding: 30px 40px;
-  border-radius: 0 0 20px 20px;
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 .logo {
   display: flex;
   align-items: center;
@@ -626,24 +630,22 @@ input[type="range"] {
   display: flex;
   justify-content: center;
   width: 100%;
- 
+  margin-top: 60px;
   margin-right: 50px;
-  margin-top: -5px;
 }
 .calculate-btn {
-    background: #007aff;
-    color: #fff;
-    border: none;
-    border-radius: 16px;
-    padding: 18px 48px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: background 0.2s;
-    margin-right: -300px;
-    margin-top: -90px;
+  background: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 18px 48px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
 }
+
 .calculate-btn:hover {
   background: #005bb5;
 }
@@ -767,7 +769,7 @@ calculator h3 {
 }
 
  .hero-content {
-  background-image: url('images/pk.jpg');
+  background-image: url('D:/Website-Development/images/Air.webp');
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -794,30 +796,20 @@ h2 {
   font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
-  input[type="range"] {
-    width: 100%;
-    padding: 10px 1px;
-    border-radius: 8px;
-    border: none;
-    font-size: 1rem;
-    margin-bottom: 8px;
-    background: #f4f6fa;
-    color: #222;
-}
  
 .calculator {
-    flex: 1 1 0%;
- 
-  display: flex;
-  min-width: 320px;
-  max-width: 300PX;
-  border-color: hsl(var(--border));
-  box-sizing: border-box;
-  height: 300PX;
-  min-height: 200PX;
- border-width: 0;
-  border-style: solid;
-
+    background: #0a2342;
+    color: #fff;
+    border-radius: 28px;
+    padding: .75rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+    min-width: 320px;
+    max-width: 480px;
+    /* width: 600px; */
+    height: 400px;
+    min-height: 400px;
+    margin-top: 113px;
+    display: flex
 ;
     flex-direction: column;
     gap: 28px;
@@ -831,48 +823,45 @@ h2 {
 ;
     border-color: hsl(var(--border));
 }
-  .hero-content {
-  background-image: url('images/pk.jpg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  min-height: 400px; /* adjust as needed */
-  width: 100%;
-  /* Optional: add padding or height as needed */
-}
 
-.sort-select {
-    border: 2px solid #222;
-    background: #fff;
-    border-radius: 20px;
-    padding: 8px 22px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    min-width: 110px;
-    max-width: 140px;
-    height: 40px;
-    box-sizing: border-box;
-    margin: 0;
-    margin-right: 30px;
-    transition: background 0.2s, border-color 0.2s;
-    margin-bottom: 10px;
+
+ 
 }
-  .filter-btn {
-    border: 2px solid #222;
-    background: #fff;
-    border-radius: 20px;
-    padding: 8px 22px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    min-width: 110px;
-    max-width: 140px;
-    height: 40px;
-    box-sizing: border-box;
-    margin-left: 0px;
-    transition: background 0.2s, border-color 0.2s;
-}
+/* Mobile Sidebar styles (left drawer) */
+    .mobile-sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      width: 250px;
+      background-color: #fff;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+      transition: left 0.3s ease;
+      z-index: 9999;
+      padding-top: 60px;
+    }
+
+    .mobile-sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .mobile-sidebar li {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .mobile-sidebar a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+      display: block;
+    }
+
+    .mobile-sidebar.show {
+      left: 0;
+    }
+
   
 
-}
+
