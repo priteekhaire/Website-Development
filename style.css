@@ -630,18 +630,19 @@ input[type="range"] {
   margin-right: 50px;
 }
 .calculate-btn {
-  background: #007aff;
-  color: #fff;
-  border: none;
-  border-radius: 16px;
-  padding: 18px 48px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: background 0.2s;
+    background: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 18px 48px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: background 0.2s;
+    margin-right: -300px;
+    margin-top: -90px;
 }
-
 
 .calculate-btn:hover {
   background: #005bb5;
