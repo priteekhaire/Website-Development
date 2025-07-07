@@ -644,7 +644,7 @@ input[type="range"] {
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: background 0.2s;
- 
+}
 
 .calculate-btn:hover {
   background: #005bb5;
@@ -861,6 +861,10 @@ h2 {
     .mobile-sidebar.show {
       left: 0;
     }
+
+  
+
+
 
   
 
