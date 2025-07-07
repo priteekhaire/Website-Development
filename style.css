@@ -644,9 +644,7 @@ input[type="range"] {
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: background 0.2s;
-  margin-right: -300px;
-    margin-top: 0px;
-}
+ 
 
 .calculate-btn:hover {
   background: #005bb5;
