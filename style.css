@@ -626,8 +626,9 @@ input[type="range"] {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 60px;
+ 
   margin-right: 50px;
+  margin-top: -5px;
 }
 .calculate-btn {
     background: #007aff;
@@ -643,7 +644,6 @@ input[type="range"] {
     margin-right: -300px;
     margin-top: -90px;
 }
-
 .calculate-btn:hover {
   background: #005bb5;
 }
