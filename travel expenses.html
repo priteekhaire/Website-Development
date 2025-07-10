@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Travel Cost Calculator</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     * {
       box-sizing: border-box;
@@ -183,9 +184,11 @@
 
     .hamburger {
       display: none;
-      font-size: 2rem;
+      font-size:26px;
       cursor: pointer;
-      order: -1; /* Put before logo */
+      position: absolute;
+      left: 36px;
+      top: 16px;
     }
 
     .contact-btn {
@@ -210,11 +213,13 @@
       .nav {
         display: none;
       }
-      
 
       .hamburger {
         display: block;
       }
+      
+    .mobile-sidebar.open {
+        left: 0;
     }
 
     .mobile-sidebar {
@@ -268,10 +273,11 @@
       <li><a href="travel expenses.html" class="active">Travel Expenses</a></li>
       <li><a href="browse-ac.html">Browse AC</a></li>
       <li><a href="blogs.html">Blogs</a></li>
+      <a href="#footer" class="contact-btn">Contact Us</a>
     </ul>
-  </nav>
+  
 
-  <a href="#footer" class="contact-btn">Contact Us</a>
+  
 </header>
 
 <div id="mobileSidebar" class="mobile-sidebar">
@@ -348,6 +354,13 @@
   function toggleSidebar() {
     document.getElementById('mobileSidebar').classList.toggle('show');
   }
+
+  // Auto-close sidebar on link click (mobile)
+  document.querySelectorAll('#mobileSidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileSidebar').classList.remove('show');
+    });
+  });
 
   const countryCityMap = {
     india: {
@@ -433,6 +446,7 @@
       <b>Total Estimated Cost:</b> ₹${totalCost.toFixed(0)}
     `;
   }
+
 </script>
 
 </body>
