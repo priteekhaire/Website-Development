@@ -6,7 +6,185 @@
   <title>Travel Cost Calculator</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: #ffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+   .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+    .logo span {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00aced;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: rgb(248, 246, 246);
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover,
+    .nav .active {
+      color: #00aced;
+    }
+
+    .main-content {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      margin-top: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .main-content h2 {
+      margin-bottom: 1rem;
+      color: #003366;
+    }
+
+    .row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    select,
+    input {
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #003366;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00509e;
+    }
+
+    .result {
+      background: #e0f7fa;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 48px 16px 32px 16px;
+      background: #fff;
+      color: #111;
+      margin-top: 32px;
+      border-top: 1px solid #eee;
+    }
+
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .footer-title {
+      font-weight: bold;
+      color: #111;
+      letter-spacing: 2px;
+    }
+
+    .footer-follow {
+      font-size: 1.1rem;
+      margin: 12px 0 8px 0;
+      font-weight: 500;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-social a img {
+      filter: grayscale(1) brightness(0.5);
+      transition: filter 0.2s;
+    }
+
+    .footer-social a:hover img {
+      filter: none;
+    }
+
+    .footer-contact {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-copyright {
+      font-size: 1.1rem;
+      margin-top: 8px;
+      color: #222;
+    }
+
     .hamburger {
       display: none;
       font-size:26px;
@@ -16,7 +194,23 @@
       top: 16px;
     }
 
-   
+    .contact-btn {
+    background: #007aff;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    .contact-btn:hover {
+      background: #005bb5;
+    }
 
     @media screen and (max-width: 768px) {
       .nav {
